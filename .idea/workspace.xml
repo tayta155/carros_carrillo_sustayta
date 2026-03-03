@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c0807cc-aa6c-4307-a097-9d9fd5f8b03e" name="Changes" comment="prueba remota para git hub">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/com/carros/backend/Remoto/prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/carros/backend/romoto/remoto.java" beforeDir="false" />
-    </list>
+    <list default="true" id="9c0807cc-aa6c-4307-a097-9d9fd5f8b03e" name="Changes" comment="prueba remota para git hub" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +51,9 @@
     &quot;accountId&quot;: &quot;12544c69-fcab-4422-b6c9-4c390ccc80aa&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/src/test/java/com/carros/backend/Remoto/prueba.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -115,7 +114,7 @@
       <updated>1772484713514</updated>
       <workItem from="1772495176596" duration="515000" />
       <workItem from="1772550850453" duration="2316000" />
-      <workItem from="1772553199422" duration="1111000" />
+      <workItem from="1772553199422" duration="1862000" />
     </task>
     <task id="LOCAL-00001" summary="prueba remota para git hub">
       <option name="closed" value="true" />
@@ -125,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772556326736</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prueba remota para git hub">
+      <option name="closed" value="true" />
+      <created>1772556743169</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772556743169</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
