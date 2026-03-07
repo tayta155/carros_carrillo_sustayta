@@ -11,7 +11,8 @@ public class VehiculoService {
 
     private final VehiculoRepository vehiculoRepository;
 
-    public VehiculoRepository(VehiculoRepository vehiculoRepository){
+    public VehiculoService(VehiculoRepository vehiculoRepository){
+
         this.vehiculoRepository = vehiculoRepository;
     }
 
@@ -22,6 +23,7 @@ public class VehiculoService {
     }
 
     public List<Vehiculo> obtenerVehiculos(){
+
         return  vehiculoRepository.findAll();
     }
 
