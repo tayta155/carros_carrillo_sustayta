@@ -15,6 +15,8 @@ import lombok.*;
 public class Vehiculo {
 
     @Id
+
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
