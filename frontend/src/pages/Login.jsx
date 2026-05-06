@@ -4,7 +4,7 @@ function Login() {
         // Fondo gris claro — ocupa toda la pantalla
         <div className="min-h-screen bg-gray-200 flex items-center justify-center p-4">
              {/* Card centrada — máximo 400px de ancho */}
-            <div className="w-full max-w-sm bg-white rounded-2x1 shadow-sm border border-gray-100 p-8 " >
+            <div className="w-full max-w-sm bg-black rounded-2x1 shadow-sm border border-gray-100 p-8  " >
 
                 <div className="mb-8">
                     <div className="w-10 h-10 bg-blue-600 rounded-xl mb-6" />
