@@ -1,3 +1,8 @@
+import { UserIcon } from "@heroicons/react/24/outline";
+import { LockClosedIcon } from "@heroicons/react/24/outline";
+
+
+
 function Login() {
     return (
 
@@ -8,21 +13,25 @@ function Login() {
 
                 <div className="h-24 mb-8 flex flex-col items-center justify-center">
                     <h1 className="text-center font-semibold text-gray-900"> Bienvenido!!! </h1>
-                    <p className="text-sm text-gray-500 mt-1"> Inicia sesión en tu cuenta </p>
+                    <p className="text-sm text-center text-gray-500 mt-1"> Inicia sesión en tu cuenta </p>
                 </div>
 
             {/* Formulario vacío por ahora */}
             <div className="space-y-4">
                 {/* Aquí van los inputs — Paso 2 */}
-                <div>
+                <div className="flex items-center gap-1">
+                    <UserIcon className="h-5 w-5 text-cyan-600" />
                     <p className="text-sm text-gray-500">Nombre de usuario</p>
-                    <div className="h-11 bg-gray-100 rounded-lg animate-pulse" >
-                    </div>
                 </div>
-                <div>
+                    <div className="h-11 bg-gray-100 rounded-lg animate-pulse"></div>
+
+                <div className="flex items-center gap-1">
+                    <LockClosedIcon className="h-5 w-5 text-cyan-600" />
                     <p className="text-sm text-gray-500">Contraseña</p>
-                    <div className="h-11 bg-gray-100 rounded-lg animate-pulse" />
                 </div>
+                <div className="h-11 bg-gray-100 rounded-lg animate-pulse" />
+                
+
                 <div>
                     <div className="h-11 bg-blue-600 rounded-lg animate-pulse" >
                         <button className="w-full h-full text-white font-medium" disabled>
@@ -33,12 +42,11 @@ function Login() {
             </div>
 
             {/* Espacio entre el formulario y el footer */}
-            <div className="mb-6" >
-                <div>
-                    <p className="text-sm text-gray-500">contraseña olvidada?</p>
-                </div>
-                
-            </div> 
+            
+            <p className="mt-4 text-sm text-gray-500">contraseña olvidada?
+                    <a href="#" className="text-blue-600 font-medium hover:underline" > Recuperar contraseña </a>
+            </p>
+                 
 
             {/* Footer */}
             <p className="text-center text-sm text-gray-500 mt-6">
@@ -47,6 +55,12 @@ function Login() {
                     Registrate
                 </a>
             </p>
+
+            <div className=" flex items-center justify-center mt-6">
+                <p className="text-b text-gray-500">confirma por correo</p>
+            </div>
+
+
             </div>
         </div>
     )
