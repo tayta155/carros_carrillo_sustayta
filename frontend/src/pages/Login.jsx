@@ -1,5 +1,6 @@
 import { UserIcon } from "@heroicons/react/24/outline";
 import { LockClosedIcon } from "@heroicons/react/24/outline";
+import { Input } from "@material-tailwind/react";
 
 
 function Login() {
@@ -10,7 +11,7 @@ function Login() {
              {/* Card centrada — máximo 400px de ancho */}
             <div className="w-full max-w-sm bg-white rounded-2xl p-8 border border border-cyan-950 shadow-[0_0_20px_rgba(125,211,252,0.7),0_0_80px_rgba(56,189,248,0.35)]">
 
-                <div className="h-24 mb-8 flex flex-col items-center justify-center">
+                <div className="h-18 mb-8 flex flex-col items-center justify-center">
                     <h1 className="text-center font-semibold text-gray-900"> Bienvenido!!! </h1>
                     <p className="text-sm text-center text-gray-500 mt-1"> Inicia sesión en tu cuenta </p>
                 </div>
@@ -18,10 +19,12 @@ function Login() {
             {/* Formulario vacío por ahora */}
             <div className="space-y-4">
                 {/* Aquí van los inputs — Paso 2 */}
-                <div className="flex items-center gap-1">
+                 
+                    <div className="flex items-center gap-1">
                     <UserIcon className="h-5 w-5 text-cyan-600" />
                     <p className="text-sm text-gray-500">Nombre de usuario</p>
-                </div>
+                    </div>
+
                     <div className="h-11 bg-gray-100 rounded-lg animate-pulse"></div>
 
                 <div className="flex items-center gap-1">
@@ -61,19 +64,8 @@ function Login() {
             </div>
 
             <div className="flex items-center justify-center mt-4">
-                <a href="#!" role="button" className="mx-2">
-                     {/* <!-- Twitter --> */}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-7 w-7"
-                        fill="currentColor"
-                        style={{ color: "#000000" }}
-                        viewBox="0 0 24 24"
->
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                </a>
 
+                {/* link facebook */}
                 <a href="#!" role="button" className="mx-2">
                     <svg
                          xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +78,7 @@ function Login() {
                 </svg>
                 </a>
 
+                {/* link de apple */}
                 <a href="#!" role="button" className="mx-2">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -97,6 +90,7 @@ function Login() {
                         </svg>
                 </a>
 
+                {/* cuenta de google */}
                 <a href="#!" role="button" className="mx-2">
 
                     <svg
@@ -122,20 +116,21 @@ function Login() {
                             />
                     </svg>     
                 </a>
-
+                
+                {/* link de microsoft */}
                 <a href="#!" role="button" className="mx-2">
-                    <svg
+                        <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-7 w-7"
-                            viewBox="0 0 48 48"
-                            >
-                            <path fill="#1976D2" d="M42 12v24H22V12z"/>
-                            <path fill="#2196F3" d="M22 12L6 16v16l16 4z"/>
-                            <path fill="#fff" d="M17 20c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
-                    </svg>
+                            viewBox="0 0 24 24"
+                        >
+                            <path fill="#f25022" d="M1 1h10v10H1z"/>
+                            <path fill="#00a4ef" d="M13 1h10v10H13z"/>
+                            <path fill="#7fba00" d="M1 13h10v10H1z"/>
+                            <path fill="#ffb900" d="M13 13h10v10H13z"/>
+                        </svg>
                 </a>
-                 
-
+    
             </div>
 
             </div>
