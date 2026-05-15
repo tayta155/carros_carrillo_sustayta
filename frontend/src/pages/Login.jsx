@@ -17,39 +17,40 @@ function Login() {
                 </div>
 
             {/* Formulario vacío por ahora */}
-            <div className="space-y-4">
-                {/* Aquí van los inputs — Paso 2 */}
-                 
+            <form>
+            <div>
+                {/* Aquí van los inputs — Paso 2 */} 
+                <div className="flex flex-col gap-1 ">
                     <div className="flex items-center gap-1">
-                    <UserIcon className="h-5 w-5 text-cyan-600" />
-                    <p className="text-sm text-gray-500">Nombre de usuario</p>
+                        <UserIcon className="h-5 w-5 text-cyan-600" />
+                        <p className="text-sm text-gray-500 ">Nombre de usuario</p> 
                     </div>
-
-                    <div className="h-11 bg-gray-100 rounded-lg animate-pulse"></div>
-
-                <div className="flex items-center gap-1">
-                    <LockClosedIcon className="h-5 w-5 text-cyan-600" />
-                    <p className="text-sm text-gray-500">Contraseña</p>
+                        <input className=" h-11 bg-gray-100 rounded-lg animate-pulse px-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-2 transition-colors duration-200" type="text"
+                                placeholder="Escribe tu nombre de usuario" />  
                 </div>
-                <div className="h-11 bg-gray-100 rounded-lg animate-pulse" />
-                
 
-                <div>
+                <div className="flex flex-col gap-1">
+                    <div className="flex items-center gap-1">
+                        <LockClosedIcon className="h-5 w-5 text-cyan-600" />
+                        <p className="text-sm text-gray-500">Contraseña</p>
+                    </div>
+                        <input className="h-11 bg-gray-100 rounded-lg animate-pulse px-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-4 transition-colors duration-200" type="password"
+                                placeholder="Escribe tu contraseña" />
+                </div>
+                
                     <div className="h-11 bg-blue-600 rounded-lg animate-pulse" >
-                        <button className="w-full h-full text-white font-medium" disabled>
+                        <button className="w-full h-full text-white font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 transition-colors duration-200">
                             Iniciar sesión
                         </button>
                     </div>
-                </div>
             </div>
+            </form>
 
             {/* Espacio entre el formulario y el footer */}
-            
             <p className="mt-4 text-sm text-gray-500">contraseña olvidada?
                     <a href="#" className="text-blue-600 font-medium hover:underline" > Recuperar contraseña </a>
             </p>
                  
-
             {/* Footer */}
             <p className="text-center text-sm text-gray-500 mt-6">
                 No tienes cuenta?{' '}
