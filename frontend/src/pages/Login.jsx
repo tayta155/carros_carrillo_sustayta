@@ -1,13 +1,38 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { UserIcon } from "@heroicons/react/24/outline";
 import { LockClosedIcon } from "@heroicons/react/24/outline";
 import { Input } from "@material-tailwind/react";
 
 
 function Login() {
+    const navigate = useNavigate();
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        // Validación simple - Cambia esto según tus necesidades
+        if ( username === 'admin' && password === 'admin123') {
+
+             // Guardar estado de autenticación
+            localStorage.setItem('isAuthenticated', 'true');
+            localStorage.setItem('user', username);
+            // Redirigir al dashboard
+
+            navigate('/dashboard');
+        } else {
+            setError("Credenciales inválidas. Inténtalo de nuevo.");
+            // Limpiar error después de 3 segundos
+            setTimeout(() => setError(""), 3000);
+        }
+         };
     return (
 
         // Fondo gris claro — ocupa toda la pantalla
-        <div className="min-h-screen bg-gradient-to-r from-slate-900 to-slate-700 flex items-center justify-center p-4"> 
+        <div className="min-h-screen bg-gradient-to-r from-slate-900 to-slate-700 flex items-center justify-center p-4 animate-fadeIn"> 
              {/* Card centrada — máximo 400px de ancho */}
             <div className="w-full max-w-sm bg-white rounded-2xl p-8 border border border-cyan-950 shadow-[0_0_20px_rgba(125,211,252,0.7),0_0_80px_rgba(56,189,248,0.35)]">
 
@@ -17,32 +42,40 @@ function Login() {
                 </div>
 
             {/* Formulario vacío por ahora */}
-            <form>
-            <div>
+            <form onSubmit={handleSubmit}>
+            <div className="flex flex-col">
                 {/* Aquí van los inputs — Paso 2 */} 
-                <div className="flex flex-col gap-1 ">
-                    <div className="flex items-center gap-1">
-                        <UserIcon className="h-5 w-5 text-cyan-600" />
-                        <p className="text-sm text-gray-500 ">Nombre de usuario</p> 
-                    </div>
-                        <input className=" h-11 bg-gray-100 rounded-lg animate-pulse px-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-2 transition-colors duration-200" type="text"
-                                placeholder="Escribe tu nombre de usuario" />  
+                <div className="relative mb-4">
+                        <UserIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <input className="w-full h-11 bg-gray-100 rounded-lg pl-10 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors duration-200" 
+                            type="text"                                
+                            placeholder="Usuario" 
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                            
                 </div>
 
-                <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-1">
-                        <LockClosedIcon className="h-5 w-5 text-cyan-600" />
-                        <p className="text-sm text-gray-500">Contraseña</p>
-                    </div>
-                        <input className="h-11 bg-gray-100 rounded-lg animate-pulse px-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 mb-4 transition-colors duration-200" type="password"
-                                placeholder="Escribe tu contraseña" />
+                <div className="relative">
+                        <LockClosedIcon className= "absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <input className="w-full h-11 bg-gray-100 rounded-lg pl-10 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors duration-200" 
+                            type="password"
+                            placeholder="Contraseña"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                 </div>
                 
-                    <div className="h-11 bg-blue-600 rounded-lg animate-pulse" >
-                        <button className="w-full h-full text-white font-medium focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 transition-colors duration-200">
+                        <button className="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200 mt-4">
                             Iniciar sesión
                         </button>
-                    </div>
+
+                        {error && (  
+                            <div className="mt-2 text-red-600 text-sm text-center">
+                             {error}
+                            </div>
+                        )}
+                    
             </div>
             </form>
 
