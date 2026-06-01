@@ -5,7 +5,7 @@ export default function Sidebar({onLogout}) {
     const [isOpen, setIsOpen] = useState(true);
 
     const menuItems = [
-        {icon: Home, label: 'Dashboard', href: '#'},
+        {icon: Home, label: 'Dashboard', href: '# transition '},
         {icon: Car, label: 'Vehículos', href: '#'},
         {icon: Users, label: 'Clientes', href: '#'},
         {icon: Settings, label: 'Reportes', href: '#'},
@@ -27,7 +27,7 @@ export default function Sidebar({onLogout}) {
                 { isOpen && (
                     <div className="flex items-center gap-2">
                         <Car className="h-6 w-6 text-orange-500 "/>
-                        <span className="text-white font-bold text-lg">AutoRent</span>
+                        <span className="text-white font-bold text-lg"> [Logo]Sustayta racing</span>
                     </div>
                 )}
             <button

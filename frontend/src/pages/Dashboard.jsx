@@ -9,7 +9,7 @@ export default function Dashboard() {
     }
 
     return (
-        <div className="flex h-screen bg-black overflow-hidden">
+        <div className="flex h-screen bg-black overflow-hidden ">
             <Sidebar onLogout={handleLogout} />
             <div className="flex-1 flex flex-col overflow-hidden ml-64">
                 <Header />
