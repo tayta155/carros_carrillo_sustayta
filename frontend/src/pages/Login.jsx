@@ -99,7 +99,7 @@ function Login() {
             <div className="flex items-center justify-center mt-4">
 
                 {/* link facebook */}
-                <a href="#!" role="button" className="mx-2">
+                <a href="#!" role="button" className="mx-2 transition duration-700 ease-in-out hover:scale-125 active:scale-95" >
                     <svg
                          xmlns="http://www.w3.org/2000/svg"
                         className="h-7 w-7"
@@ -112,7 +112,7 @@ function Login() {
                 </a>
 
                 {/* link de apple */}
-                <a href="#!" role="button" className="mx-2">
+                <a href="#!" role="button" className="mx-2 transition duration-700 ease-in-out hover:scale-125 active:scale-95">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-7 w-7"
@@ -124,7 +124,7 @@ function Login() {
                 </a>
 
                 {/* cuenta de google */}
-                <a href="#!" role="button" className="mx-2">
+                <a href="#!" role="button" className="mx-2 transition duration-700 ease-in-out hover:scale-125 active:scale-95">
 
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +151,7 @@ function Login() {
                 </a>
                 
                 {/* link de microsoft */}
-                <a href="#!" role="button" className="mx-2">
+                <a href="#!" role="button" className="mx-2 transition duration-700 ease-in-out hover:scale-125 active:scale-95">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-7 w-7"
